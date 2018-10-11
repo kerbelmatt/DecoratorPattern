@@ -4,37 +4,37 @@
  * and open the template in the editor.
  */
 package autoDealership.TrimLevels;
+
 import autoDealership.VehicleTypes.Vehicles;
-import autoDealership.*;
 import java.util.HashMap;
+
 /**
  *
  * @author mkmat
  */
-public class Touring extends OptionDecorator {
-    
+public class Economy extends Vehicles {
     Vehicles vehicle;
     
-     public Touring(Vehicles vehicle) {
+     public Economy(Vehicles vehicle) {
          this.vehicle = vehicle;
      }
      
      public String getDesc() {
-         return vehicle.getDesc() + " Touring Edition";
+         return vehicle.getDesc() + " Economy Edition";
      }
 
     @Override
     public HashMap<String, String> getOptions() {
         HashMap<String, String> options = vehicle.getOptions();
-        options.put("Seats", "Leather");
-        options.put("Engine", "5.0L V8");
-        options.put("Wheels", "19 inch");
+        options.put("Seats", "Cloth");
+        options.put("Engine", "2.0L I4");
+        options.put("Wheels", "14 inch");
         return options;
                
     }
 
     @Override
     public double cost() {
-        return vehicle.cost() + 2000;
+        return vehicle.cost() - 2000;
     }
 }

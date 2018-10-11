@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package autoDealership;
-
+package autoDealership.VehicleTypes;
 import java.util.HashMap;
 
 /**
@@ -14,14 +8,16 @@ import java.util.HashMap;
 public abstract class Vehicles {
     
     String description = "Unknown";
+    HashMap<String, String> options = new HashMap<String, String>();
 
-    public String getDesc() {
+      public String getDesc() {
         return description;
     }
-
+    
     public abstract HashMap<String, String> getOptions();
     
     public abstract double cost();
+    
   
 }
     

@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package autoDealership;
-
+package autoDealership.VehicleTypes;
 import java.util.HashMap;
-import autoDealership.TrimLevels.*;
 /**
  *
  * @author mkmat
  */
-public class SportsCar extends OptionDecorator {
+public class SportsCar extends Vehicles {
     
     public SportsCar() {
         description = "Sports Car";
@@ -32,9 +25,10 @@ public class SportsCar extends OptionDecorator {
         HashMap<String, String> options = new HashMap<String, String>();
         
         //Set default options 
-        options.put("seats", "Sport Cloth");
-        options.put("engine", "3.8L V6");
-        options.put("wheels", "17 inch");
+        options.put("Seats", "Sport Cloth");
+        options.put("Engine", "3.8L V6");
+        options.put("Wheels", "17 inch");
+        options.put("HVAC", "A/C and Heat");
     
         return options;
     }

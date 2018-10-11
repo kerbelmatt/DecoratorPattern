@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package autoDealership;
 
-import java.util.ArrayList;
+import autoDealership.VehicleTypes.Vehicles;
 
 /**
  *
@@ -13,6 +8,7 @@ import java.util.ArrayList;
  */
 public abstract class OptionDecorator extends Vehicles {
     
+    @Override
     public abstract String getDesc();
-    
+   
 }

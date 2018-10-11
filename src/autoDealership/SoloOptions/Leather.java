@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package autoDealership.TrimLevels;
+package autoDealership.SoloOptions;
 import autoDealership.VehicleTypes.Vehicles;
 import autoDealership.*;
 import java.util.HashMap;
@@ -11,30 +11,29 @@ import java.util.HashMap;
  *
  * @author mkmat
  */
-public class Touring extends OptionDecorator {
-    
+public class Leather extends OptionDecorator {
+
     Vehicles vehicle;
     
-     public Touring(Vehicles vehicle) {
+     public Leather(Vehicles vehicle) {
          this.vehicle = vehicle;
      }
      
      public String getDesc() {
-         return vehicle.getDesc() + " Touring Edition";
+         return vehicle.getDesc();
      }
 
     @Override
     public HashMap<String, String> getOptions() {
         HashMap<String, String> options = vehicle.getOptions();
         options.put("Seats", "Leather");
-        options.put("Engine", "5.0L V8");
-        options.put("Wheels", "19 inch");
         return options;
                
     }
 
     @Override
     public double cost() {
-        return vehicle.cost() + 2000;
+        return vehicle.cost() + 999;
     }
+    
 }

@@ -1,20 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package autoDealership;
+import autoDealership.VehicleTypes.*;
 import autoDealership.TrimLevels.*;
+import autoDealership.SoloOptions.*;
 /**
  *
  * @author mkmat
  */
 public class DriverClass {
+    
     public static void main(String args[]) {
-        Vehicles vehicle = new SportsCar();
-        Vehicles vehicle2 = new PickupTruck();
-        vehicle2 = new Touring(vehicle2);
+
+        Vehicles baseSportsCar = new SportsCar();
         
-        System.out.println(vehicle2.getDesc());
+        System.out.println("Vehicle: " + baseSportsCar.getDesc());
+        System.out.println("Cost: " + baseSportsCar.cost());
+        System.out.println("Options: " + baseSportsCar.getOptions());
+   
     }
+    
 }

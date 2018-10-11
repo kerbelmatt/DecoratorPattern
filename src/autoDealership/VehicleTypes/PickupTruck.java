@@ -1,17 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package autoDealership;
+package autoDealership.VehicleTypes;
 
 import java.util.HashMap;
-import autoDealership.TrimLevels.*;
 /**
  *
  * @author mkmat
  */
 public class PickupTruck extends Vehicles {
+    
     public PickupTruck() {
         description = "Pickup Truck";
     }
@@ -23,7 +18,7 @@ public class PickupTruck extends Vehicles {
     
     @Override
     public double cost() {
-        return 29999;
+        return 19999;
     }
     
     @Override
@@ -31,9 +26,10 @@ public class PickupTruck extends Vehicles {
         HashMap<String, String> options = new HashMap<String, String>();
         
         //Set default options 
-        options.put("seats", "Sport Cloth");
-        options.put("engine", "3.8L V6");
-        options.put("wheels", "17 inch");
+        options.put("Seats", "Cloth");
+        options.put("Engine", "3.8L V6");
+        options.put("Wheels", "15 inch");
+        options.put("HVAC", "A/C and Heat");
     
         return options;
     }
