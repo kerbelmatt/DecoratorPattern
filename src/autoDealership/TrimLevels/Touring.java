@@ -15,14 +15,26 @@ public class Touring extends OptionDecorator {
     
     Vehicles vehicle;
     
-     public Touring(Vehicles vehicle) {
+    /**
+     *
+     * @param vehicle
+     */
+    public Touring(Vehicles vehicle) {
          this.vehicle = vehicle;
      }
      
-     public String getDesc() {
+    /**
+     *
+     * @return
+     */
+    public String getDesc() {
          return vehicle.getDesc() + " Touring Edition";
      }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public HashMap<String, String> getOptions() {
         HashMap<String, String> options = vehicle.getOptions();
@@ -33,6 +45,10 @@ public class Touring extends OptionDecorator {
                
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public double cost() {
         return vehicle.cost() + 2000;

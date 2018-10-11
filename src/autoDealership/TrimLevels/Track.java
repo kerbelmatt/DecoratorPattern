@@ -1,26 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package autoDealership.TrimLevels;
 
 import autoDealership.VehicleTypes.Vehicles;
 import autoDealership.*;
 import java.util.HashMap;
 
-/**
- *
- * @author mkmat
- */
 public class Track extends Vehicles {
     Vehicles vehicle;
     
-     public Track(Vehicles vehicle) {
+
+    public Track(Vehicles vehicle) {
          this.vehicle = vehicle;
      }
      
-     public String getDesc() {
+    
+    public String getDesc() {
          return vehicle.getDesc() + " Track Package";
      }
 

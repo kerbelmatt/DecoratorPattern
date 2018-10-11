@@ -6,20 +6,35 @@ import java.util.HashMap;
  */
 public class SportsCar extends Vehicles {
     
+    /**
+     *
+     */
     public SportsCar() {
         description = "Sports Car";
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public String getDesc() {
         return description;
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public double cost() {
         return 29999;
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public HashMap<String, String> getOptions() {
         HashMap<String, String> options = new HashMap<String, String>();

@@ -7,20 +7,35 @@ import java.util.HashMap;
  */
 public class PickupTruck extends Vehicles {
     
+    /**
+     *
+     */
     public PickupTruck() {
         description = "Pickup Truck";
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public String getDesc() {
         return description;
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public double cost() {
         return 19999;
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public HashMap<String, String> getOptions() {
         HashMap<String, String> options = new HashMap<String, String>();

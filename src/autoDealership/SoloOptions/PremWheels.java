@@ -1,4 +1,6 @@
 package autoDealership.SoloOptions;
+
+import autoDealership.OptionDecorator;
 import autoDealership.VehicleTypes.Vehicles;
 import java.util.HashMap;
 
@@ -6,43 +8,43 @@ import java.util.HashMap;
  *
  * @author mkmat
  */
-public class AutoBrake extends Vehicles {
+public class PremWheels extends OptionDecorator{
     Vehicles vehicle;
     
     /**
-     * Constructor
+     *
      * @param vehicle
      */
-    public AutoBrake(Vehicles vehicle) {
+    public PremWheels(Vehicles vehicle) {
          this.vehicle = vehicle;
      }
      
     /**
-     * Gets description
-     * @return Returns description
+     *
+     * @return
      */
     public String getDesc() {
          return vehicle.getDesc();
      }
 
     /**
-     * Gets the vehicle options
-     * @return Returns a hashmap with the vehicle options
+     *
+     * @return
      */
     @Override
     public HashMap<String, String> getOptions() {
         HashMap<String, String> options = vehicle.getOptions();
-        options.put("Automatic Braking", "Included");
+        options.put("Wheels", "19 inch chrome");
         return options;
                
     }
 
     /**
-     * Calculates and returns the cost of the vehicle
-     * @return Returns double value of cost
+     *
+     * @return
      */
     @Override
     public double cost() {
-        return vehicle.cost() + 2000;
+        return vehicle.cost() + 500;
     }
 }

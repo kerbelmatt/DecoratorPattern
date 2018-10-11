@@ -1,10 +1,7 @@
 package autoDealership.VehicleTypes;
 import java.util.HashMap;
 
-/**
- *
- * @author mkmat
- */
+
 public class FullSizeSedan extends Vehicles {
     
     public FullSizeSedan() {

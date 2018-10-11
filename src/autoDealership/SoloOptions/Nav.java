@@ -14,14 +14,26 @@ import java.util.HashMap;
 public class Nav extends OptionDecorator{
     Vehicles vehicle;
     
-     public Nav(Vehicles vehicle) {
+    /**
+     *
+     * @param vehicle
+     */
+    public Nav(Vehicles vehicle) {
          this.vehicle = vehicle;
      }
      
-     public String getDesc() {
+    /**
+     *
+     * @return
+     */
+    public String getDesc() {
          return vehicle.getDesc();
      }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public HashMap<String, String> getOptions() {
         HashMap<String, String> options = vehicle.getOptions();
@@ -30,6 +42,10 @@ public class Nav extends OptionDecorator{
                
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public double cost() {
         return vehicle.cost() + 2000;

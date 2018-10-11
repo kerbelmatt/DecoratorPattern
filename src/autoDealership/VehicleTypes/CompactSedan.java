@@ -7,20 +7,35 @@ import java.util.HashMap;
  */
 public class CompactSedan extends Vehicles {
     
+    /**
+     *
+     */
     public CompactSedan() {
         description = "Compact Sedan";
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public String getDesc() {
         return description;
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public double cost() {
         return 14999;
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public HashMap<String, String> getOptions() {
         

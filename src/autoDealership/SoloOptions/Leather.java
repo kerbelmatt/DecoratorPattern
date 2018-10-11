@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package autoDealership.SoloOptions;
+import autoDealership.OptionDecorator;
 import autoDealership.VehicleTypes.Vehicles;
-import autoDealership.*;
 import java.util.HashMap;
 /**
  *
@@ -15,14 +15,26 @@ public class Leather extends OptionDecorator {
 
     Vehicles vehicle;
     
-     public Leather(Vehicles vehicle) {
+    /**
+     *
+     * @param vehicle
+     */
+    public Leather(Vehicles vehicle) {
          this.vehicle = vehicle;
      }
      
-     public String getDesc() {
+    /**
+     *
+     * @return
+     */
+    public String getDesc() {
          return vehicle.getDesc();
      }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public HashMap<String, String> getOptions() {
         HashMap<String, String> options = vehicle.getOptions();
@@ -31,6 +43,10 @@ public class Leather extends OptionDecorator {
                
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public double cost() {
         return vehicle.cost() + 999;

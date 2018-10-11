@@ -11,25 +11,40 @@ import java.util.Iterator;
  */
 public class DriverClass {
   
+    /**
+     * Constructor used to instantiate the class for testing
+     */
     public DriverClass() {
         
     }
     
+    /**
+     * Main 
+     * @param args
+     */
     public static void main(String args[]) {
         
         DriverClass driver = new DriverClass();
-
-        Vehicles baseSportsCar = new SportsCar();
         
-        System.out.println(driver.formatOptions(baseSportsCar));
+        //A base pickup truck
+        Vehicles basePickup = new PickupTruck();
+        System.out.println(driver.formatOptions(basePickup));
         
-        Vehicles raceCar = new SportsCar();
-        raceCar = new Track(raceCar);
-        
-        System.out.println(driver.formatOptions(raceCar));
-   
+        //A premium pickup truck with several options added individually
+        Vehicles premPickup = new PickupTruck();
+        premPickup = new Nav(premPickup);
+        premPickup = new Leather(premPickup);
+        premPickup = new AutoBrake(premPickup);
+        premPickup = new PremWheels(premPickup);
+        premPickup = new DieselEngine(premPickup);
+        System.out.println(driver.formatOptions(premPickup));
     }
     
+    /**
+     * Formats the properties of a vehicle
+     * @param vehicle A vehicle object
+     * @return Returns a String with the formatted properties of a vehicle
+     */
     public String formatOptions(Vehicles vehicle) {
         
         DecimalFormat df = new DecimalFormat("$#,###.00");
