@@ -4,7 +4,7 @@ import autoDealership.VehicleTypes.Vehicles;
 import autoDealership.*;
 import java.util.HashMap;
 
-public class Track extends Vehicles {
+public class Track extends OptionDecorator {
     Vehicles vehicle;
     
 

@@ -1,9 +1,10 @@
 package autoDealership.TrimLevels;
 
+import autoDealership.OptionDecorator;
 import autoDealership.VehicleTypes.Vehicles;
 import java.util.HashMap;
 
-public class Economy extends Vehicles {
+public class Economy extends OptionDecorator {
     Vehicles vehicle;
     
     public Economy(Vehicles vehicle) {

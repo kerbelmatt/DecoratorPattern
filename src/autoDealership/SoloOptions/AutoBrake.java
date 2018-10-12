@@ -1,4 +1,5 @@
 package autoDealership.SoloOptions;
+import autoDealership.OptionDecorator;
 import autoDealership.VehicleTypes.Vehicles;
 import java.util.HashMap;
 
@@ -6,7 +7,7 @@ import java.util.HashMap;
  *
  * @author mkmat
  */
-public class AutoBrake extends Vehicles {
+public class AutoBrake extends OptionDecorator {
     Vehicles vehicle;
     
     /**
